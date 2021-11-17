@@ -193,45 +193,30 @@
         <!--Item 1-->
         <scene sceneID="CLx-5m-B5V">
             <objects>
-                <viewController id="qGi-VR-aCi" sceneMemberID="viewController">
+                <viewController id="qGi-VR-aCi" customClass="TipsChooseViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eiW-y4-Nle">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2uN-EA-CxM">
-                                <rect key="frame" x="0.0" y="60" width="320" height="183.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2uN-EA-CxM">
+                                <rect key="frame" x="0.0" y="100" width="320" height="91.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsd-8c-Shh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsd-8c-Shh">
                                         <rect key="frame" x="139.5" y="0.0" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2RI-kb-SOj">
-                                        <rect key="frame" x="126.5" y="40.5" width="67" height="143"/>
+                                        <rect key="frame" x="126.5" y="60.5" width="67" height="31"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-5l-s7f">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Y-JI-vil">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
-                                                    <segue destination="Ls4-7T-iEc" kind="show" id="Vfj-AR-1Zh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Y-JI-vil">
-                                                <rect key="frame" x="0.0" y="56" width="67" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
+                                                    <action selector="getTipsButtonPressed" destination="qGi-VR-aCi" eventType="touchUpInside" id="GLK-jc-xPD"/>
                                                     <segue destination="Ls4-7T-iEc" kind="show" id="7ru-iH-sdA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja4-7v-9LU">
-                                                <rect key="frame" x="0.0" y="112" width="67" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
-                                                    <segue destination="Ls4-7T-iEc" kind="show" id="jal-Ma-CQv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -242,6 +227,9 @@
                                 <rect key="frame" x="80" y="388" width="160" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="EXIT"/>
+                                <connections>
+                                    <action selector="exitButtonPressed" destination="qGi-VR-aCi" eventType="touchUpInside" id="3ik-1o-Op4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qcK-dU-MZB"/>
@@ -254,19 +242,23 @@
                             <constraint firstItem="2uN-EA-CxM" firstAttribute="centerX" secondItem="eiW-y4-Nle" secondAttribute="centerX" id="WeI-1d-bwu"/>
                             <constraint firstItem="dcx-fx-Quq" firstAttribute="centerX" secondItem="eiW-y4-Nle" secondAttribute="centerX" id="buL-RN-41A"/>
                             <constraint firstItem="2uN-EA-CxM" firstAttribute="trailing" secondItem="qcK-dU-MZB" secondAttribute="trailing" id="dGa-rv-mTz"/>
-                            <constraint firstItem="2uN-EA-CxM" firstAttribute="top" secondItem="qcK-dU-MZB" secondAttribute="top" constant="60" id="oxo-51-ELq"/>
+                            <constraint firstItem="2uN-EA-CxM" firstAttribute="top" secondItem="qcK-dU-MZB" secondAttribute="top" constant="100" id="oxo-51-ELq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="LCu-xb-j0q"/>
+                    <connections>
+                        <outlet property="getTipsButton" destination="y1Y-JI-vil" id="dAY-Lh-0zh"/>
+                        <outlet property="welcomeLabel" destination="xsd-8c-Shh" id="1a5-mn-NAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfp-lk-G4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2190" y="-274"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Tips View Controller-->
         <scene sceneID="ffl-5G-IEm">
             <objects>
-                <viewController id="Ls4-7T-iEc" sceneMemberID="viewController">
+                <viewController id="Ls4-7T-iEc" customClass="ShowTipsViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="umC-ih-iSB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,6 +281,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9J6-0f-YEW"/>
+                    <connections>
+                        <outlet property="tipLabel" destination="GQI-Gl-o3n" id="9J3-Jl-BsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiG-yY-J82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,9 +309,6 @@
             <point key="canvasLocation" x="1082" y="115"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Vfj-AR-1Zh"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="3191639" width="512" height="512"/>
         <image name="pngegg (43)" width="2947" height="1067"/>
