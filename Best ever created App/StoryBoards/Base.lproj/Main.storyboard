@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="190.5" width="240" height="31"/>
                                         <color key="tintColor" red="0.27664708609532829" green="0.20622523352931843" blue="0.0012501077345688431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Получить совет"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <segue destination="0AO-No-or3" kind="show" id="jQY-aP-xTf"/>
                                         </connections>
