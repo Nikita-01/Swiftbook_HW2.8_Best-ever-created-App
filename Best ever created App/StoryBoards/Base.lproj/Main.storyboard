@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-tE-5yo">
                                 <rect key="frame" x="40" y="151" width="240" height="221.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-gD-vXa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-gD-vXa">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.27664708609999999" green="0.20622523349999999" blue="0.001250107735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,6 +36,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
+                                            <action selector="enterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgK-cr-0T8"/>
                                             <segue destination="0AO-No-or3" kind="show" id="jQY-aP-xTf"/>
                                         </connections>
                                     </button>
@@ -74,6 +75,11 @@
                             <constraint firstItem="Ah0-tE-5yo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wxH-wA-bqi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterButton" destination="hDk-TY-DOg" id="NCS-pG-hKY"/>
+                        <outlet property="initialLabel" destination="Jcy-gD-vXa" id="i9Z-lS-uxh"/>
+                        <outlet property="nameTextField" destination="M1E-Hr-qbb" id="ydS-Tc-Bln"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
