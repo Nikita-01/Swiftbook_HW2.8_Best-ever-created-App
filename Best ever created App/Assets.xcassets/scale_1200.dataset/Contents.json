@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "data" : [
     {
+      "filename" : "scale_1200.webp",
       "idiom" : "universal"
     }
   ],
