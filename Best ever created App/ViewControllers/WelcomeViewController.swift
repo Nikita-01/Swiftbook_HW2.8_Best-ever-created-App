@@ -14,7 +14,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var enterButton: UIButton!
     
     var tips = DataManager.tips
-//    var developersList = DataManager.developers
+    var developersList = Developer.getDevelopers()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,8 @@ class WelcomeViewController: UIViewController {
                 tipsChooseVC.tips = tips
               tipsChooseVC.name = nameTextField.text
             } else if let navigationVC = $0 as? UINavigationController {
-//                let developersListVC = navigationVC.topViewController as! DevelopersListViewController
-//                developersListVC.developers = developers
+                let developersListVC = navigationVC.topViewController as! DevelopersListViewController
+                developersListVC.developers = developersList
             }
         }
     }

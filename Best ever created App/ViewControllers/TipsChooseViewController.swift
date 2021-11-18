@@ -8,7 +8,7 @@
 import UIKit
 
 class TipsChooseViewController: UIViewController {
-
+    
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var getTipsButton: UIButton!
     
@@ -19,10 +19,10 @@ class TipsChooseViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = """
 Ну вот ты и добрался до тайн
-Мироздания \(name ?? "")!
+мироздания \(name ?? "")!
 """
         getTipsButton.setTitle("Get tip", for: .normal)
-      
+        
     }
     
     @IBAction func getTipsButtonPressed() {
@@ -31,6 +31,10 @@ class TipsChooseViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let showTipsVC = segue.destination as? ShowTipsViewController else { return }
+        showTipsVC.tips = tips
+    }
     
-
+    
 }

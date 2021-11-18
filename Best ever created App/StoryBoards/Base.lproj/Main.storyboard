@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-277.5" y="113.02816901408451"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Developers list-->
         <scene sceneID="wpr-dO-bE1">
             <objects>
-                <tableViewController id="u6C-dc-qKm" sceneMemberID="viewController">
+                <tableViewController id="u6C-dc-qKm" customClass="DevelopersListViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hFD-lg-08t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                             <outlet property="delegate" destination="u6C-dc-qKm" id="cVY-E5-dWq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="pzF-uR-hhR"/>
+                    <navigationItem key="navigationItem" title="Developers list" id="pzF-uR-hhR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysP-TX-AcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,8 +122,8 @@
             <objects>
                 <navigationController id="qtr-K6-BIh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="0pg-7R-64O"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xrG-yK-2xf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xrG-yK-2xf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -134,16 +134,16 @@
             </objects>
             <point key="canvasLocation" x="2190" y="471"/>
         </scene>
-        <!--View Controller-->
+        <!--Developer Info View Controller-->
         <scene sceneID="4lk-L9-tTR">
             <objects>
-                <viewController id="xI4-9Y-L7z" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fPP-Pa-5rc">
+                <viewController id="xI4-9Y-L7z" customClass="DeveloperInfoViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPP-Pa-5rc" customClass="De">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="UKi-7o-Qjh">
-                                <rect key="frame" x="40" y="76" width="240" height="380"/>
+                                <rect key="frame" x="40" y="123" width="240" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bi-13-abf">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -185,6 +185,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8T1-fz-E6i"/>
+                    <connections>
+                        <outlet property="developerAvatarView" destination="qIf-gh-ujj" id="3We-uA-8YF"/>
+                        <outlet property="developerGitHubNickLabel" destination="VbH-aE-cgt" id="5gJ-pI-EgT"/>
+                        <outlet property="developerNameLabel" destination="0bi-13-abf" id="fcZ-ZG-Rcj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNT-Vh-ZBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-Gl-o3n">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-Gl-o3n">
                                 <rect key="frame" x="40" y="60" width="240" height="428"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

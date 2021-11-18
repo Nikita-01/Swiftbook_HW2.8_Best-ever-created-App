@@ -11,12 +11,12 @@ class ShowTipsViewController: UIViewController {
 
     @IBOutlet var tipLabel: UILabel!
     
-//    var tip: String!
+    var tips: DataManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        tipLabel.text = tips.morningTips[0]
     }
     
 
