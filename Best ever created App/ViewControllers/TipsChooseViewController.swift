@@ -21,20 +21,17 @@ class TipsChooseViewController: UIViewController {
 Ну вот ты и добрался до тайн
 мироздания \(name ?? "")!
 """
-        getTipsButton.setTitle("Get tip", for: .normal)
         
     }
     
     @IBAction func getTipsButtonPressed() {
-    }
-    @IBAction func exitButtonPressed() {
-        dismiss(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let showTipsVC = segue.destination as? ShowTipsViewController else { return }
         showTipsVC.tips = tips
     }
+
     
     
 }

@@ -15,8 +15,18 @@ class ShowTipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let hour = Calendar.current.component(.hour, from: Date())
 
-        tipLabel.text = tips.morningTips[0]
+        switch hour {
+        case 3..<10:
+            tipLabel.text = tips.morningTips[Int.random(in: 0...tips.morningTips.count - 1)]
+        case 10..<16:
+            tipLabel.text = tips.tipsforTheDayTime[Int.random(in: 0...tips.tipsforTheDayTime.count - 1)]
+        case 16..<22:
+            tipLabel.text = tips.tipsForTheEvening[Int.random(in: 0...tips.tipsForTheEvening.count - 1)]
+        default:
+            tipLabel.text = tips.tipsForTheNight[Int.random(in: 0...tips.tipsForTheNight.count - 1)]
+        }
     }
     
 

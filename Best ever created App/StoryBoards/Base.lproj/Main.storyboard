@@ -24,10 +24,13 @@
                                         <color key="textColor" red="0.27664708609999999" green="0.20622523349999999" blue="0.001250107735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-Hr-qbb">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-Hr-qbb">
                                         <rect key="frame" x="0.0" y="88.5" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Xg4-5d-17E"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-TY-DOg">
                                         <rect key="frame" x="0.0" y="190.5" width="334" height="31"/>
@@ -36,7 +39,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="enterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFw-4C-tgg"/>
-                                            <segue destination="0AO-No-or3" kind="show" id="jQY-aP-xTf"/>
+                                            <segue destination="0AO-No-or3" kind="show" identifier="tipsChooseVC" id="jQY-aP-xTf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -103,11 +106,11 @@
             </objects>
             <point key="canvasLocation" x="3011" y="471"/>
         </scene>
-        <!--Item-->
+        <!--IOS Guru-->
         <scene sceneID="ruc-PO-r91">
             <objects>
                 <navigationController id="qtr-K6-BIh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="person.3.fill" catalog="system" id="0pg-7R-64O"/>
+                    <tabBarItem key="tabBarItem" title="IOS Guru" image="person.3.fill" catalog="system" id="0pg-7R-64O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xrG-yK-2xf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,21 +135,20 @@
                                 <rect key="frame" x="40" y="128" width="334" height="529"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bi-13-abf">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="48.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbH-aE-cgt">
-                                        <rect key="frame" x="0.0" y="48.5" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="76.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIf-gh-ujj">
-                                        <rect key="frame" x="0.0" y="97" width="334" height="276"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZAj-zm-0BP">
+                                        <rect key="frame" x="0.0" y="125" width="334" height="248"/>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Nh-SGe">
                                         <rect key="frame" x="0.0" y="401" width="334" height="128"/>
                                         <constraints>
@@ -155,8 +157,6 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qIf-gh-ujj" firstAttribute="trailing" secondItem="UKi-7o-Qjh" secondAttribute="trailingMargin" id="aWI-oP-Bwz"/>
-                                    <constraint firstItem="qIf-gh-ujj" firstAttribute="trailing" secondItem="XlN-Nh-SGe" secondAttribute="trailing" id="glu-9J-lcR"/>
                                     <constraint firstAttribute="width" secondItem="UKi-7o-Qjh" secondAttribute="height" multiplier="12:19" id="jJ8-8L-Uxs"/>
                                 </constraints>
                             </stackView>
@@ -172,16 +172,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="8T1-fz-E6i"/>
                     <connections>
-                        <outlet property="developerAvatarView" destination="qIf-gh-ujj" id="uJz-GF-li4"/>
+                        <outlet property="developerAvatarView" destination="ZAj-zm-0BP" id="vjZ-vv-oZ7"/>
                         <outlet property="developerGitHubNickLabel" destination="VbH-aE-cgt" id="023-d3-Lc8"/>
                         <outlet property="developerNameLabel" destination="0bi-13-abf" id="qjC-2K-EAV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNT-Vh-ZBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3795" y="470"/>
+            <point key="canvasLocation" x="3794.202898550725" y="469.41964285714283"/>
         </scene>
-        <!--Item 1-->
+        <!--Top content-->
         <scene sceneID="CLx-5m-B5V">
             <objects>
                 <viewController id="qGi-VR-aCi" customClass="TipsChooseViewController" customModule="Best_ever_created_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -199,10 +199,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2RI-kb-SOj">
-                                        <rect key="frame" x="123.5" y="40.5" width="167.5" height="34"/>
+                                        <rect key="frame" x="118.5" y="40.5" width="177.5" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-5l-s7f">
-                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="34"/>
                                                 <color key="tintColor" red="0.27664708609999999" green="0.20622523349999999" blue="0.001250107735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -217,7 +217,7 @@
                                                                 <font key="NSFont" size="17" name="Courier"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment content="совет">
+                                                        <fragment content="совет!">
                                                             <attributes>
                                                                 <font key="NSFont" size="17" name="Menlo-Regular"/>
                                                             </attributes>
@@ -248,7 +248,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="EXIT"/>
                                 <connections>
-                                    <action selector="exitButtonPressed" destination="qGi-VR-aCi" eventType="touchUpInside" id="ssv-jf-esU"/>
+                                    <segue destination="mew-6M-SzF" kind="unwind" unwindAction="unwindSegueWithSegue:" id="ZXL-cE-b0x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -267,13 +267,14 @@
                             <constraint firstItem="qcK-dU-MZB" firstAttribute="trailing" secondItem="dcx-fx-Quq" secondAttribute="trailing" constant="118" id="xg7-2D-XbE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="lightbulb" catalog="system" id="LCu-xb-j0q"/>
+                    <tabBarItem key="tabBarItem" title="Top content" image="lightbulb" catalog="system" id="LCu-xb-j0q"/>
                     <connections>
                         <outlet property="getTipsButton" destination="4J7-5l-s7f" id="CA6-Nq-zb6"/>
                         <outlet property="welcomeLabel" destination="xsd-8c-Shh" id="yeu-UW-7hP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfp-lk-G4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mew-6M-SzF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2186.9565217391305" y="-275.89285714285711"/>
         </scene>

@@ -11,7 +11,7 @@ class DeveloperInfoViewController: UIViewController {
 
     @IBOutlet var developerNameLabel: UILabel!
     @IBOutlet var developerGitHubNickLabel: UILabel!
-    @IBOutlet var developerAvatarView: UIView!
+    @IBOutlet var developerAvatarView: UIImageView!
     
     var developer: Developer!
     
@@ -19,7 +19,7 @@ class DeveloperInfoViewController: UIViewController {
         super.viewDidLoad()
         developerNameLabel.text = "Name: \(developer.name)"
         developerGitHubNickLabel.text = "GitHub nick: \(developer.gitHubNick)"
-        developerAvatarView.largeContentImage = .init(named: developer.avatar)
+        developerAvatarView.image = .init(named: developer.avatar)
       
     }
     
