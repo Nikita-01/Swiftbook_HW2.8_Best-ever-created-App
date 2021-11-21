@@ -15,31 +15,31 @@ struct Tips {
 extension Tips {
     static func getTips() -> [Tips] {
         var tips: [Tips] = []
-        
-        let morningAdvice = DataManager.tips.morningTips.shuffled()
-        let dayTimeAdvice = DataManager.tips.tipsforTheDayTime.shuffled()
-        let eveningAdvice = DataManager.tips.tipsForTheEvening.shuffled()
-        let nightAdvice = DataManager.tips.tipsForTheNight.shuffled()
-        
+
+        let morningAdvice = DataManager.tips.morningTips
+        let dayTimeAdvice = DataManager.tips.tipsforTheDayTime
+        let eveningAdvice = DataManager.tips.tipsForTheEvening
+        let nightAdvice = DataManager.tips.tipsForTheNight
+
         let iterationCount = min(
             morningAdvice.count,
             dayTimeAdvice.count,
             eveningAdvice.count,
             nightAdvice.count
         )
-        
+
         for index in 0..<iterationCount {
             let advice = Tips(
                 morningTips: morningAdvice[index],
                 dayTimeTips: dayTimeAdvice[index],
                 eveningTips: eveningAdvice[index],
                 nightTips: nightAdvice[index])
-            
+
             tips.append(advice)
-            
+
         }
-        
+
         return tips
-        
+
     }
 }

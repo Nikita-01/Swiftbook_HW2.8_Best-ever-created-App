@@ -13,7 +13,7 @@ class TipsChooseViewController: UIViewController {
     @IBOutlet var getTipsButton: UIButton!
     
     var name: String!
-    var tips: DataManager!
+    var tips: [Tips]!
     
     override func viewDidLoad() {
         super.viewDidLoad()

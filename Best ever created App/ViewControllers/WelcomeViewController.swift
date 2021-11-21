@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var enterButton: UIButton!
     
-    var tips = DataManager.tips
+    var tips = Tips.getTips()
     var developersList = Developer.getDevelopers()
     
     override func viewDidLoad() {

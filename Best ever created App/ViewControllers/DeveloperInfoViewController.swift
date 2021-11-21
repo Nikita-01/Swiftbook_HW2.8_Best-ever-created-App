@@ -20,9 +20,5 @@ class DeveloperInfoViewController: UIViewController {
         developerNameLabel.text = "Name: \(developer.name)"
         developerGitHubNickLabel.text = "GitHub nick: \(developer.gitHubNick)"
         developerAvatarView.image = .init(named: developer.avatar)
-      
     }
-    
-
-
 }

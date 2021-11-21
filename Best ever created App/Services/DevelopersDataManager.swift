@@ -9,7 +9,7 @@ class DevelopersDataManager {
 
 static let shared = DevelopersDataManager()
     
-    let names = [ "Irina",
+    let names = [ "Irina Bex",
                   "Nick R",
     ]
     
