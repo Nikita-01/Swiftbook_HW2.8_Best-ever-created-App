@@ -18,7 +18,7 @@ static let shared = DevelopersDataManager()
     ]
     
     let images = [ "BexI",
-                   "Керри"]
+                   "RNick"]
     
 private init() {}
 }
