@@ -36,7 +36,6 @@ extension Tips {
                 nightTips: nightAdvice[index])
 
             tips.append(advice)
-
         }
 
         return tips

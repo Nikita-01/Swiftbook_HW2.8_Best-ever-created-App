@@ -26,13 +26,12 @@ class DevelopersListViewController: UITableViewController {
 
         return cell
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             guard let detailVC = segue.destination as? DeveloperInfoViewController else { return }
             detailVC.developer = developers[indexPath.row]
+        }
     }
-
-}
 }

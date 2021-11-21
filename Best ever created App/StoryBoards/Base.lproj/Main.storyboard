@@ -225,7 +225,6 @@
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="getTipsButtonPressed" destination="qGi-VR-aCi" eventType="touchUpInside" id="VaS-SR-vWq"/>
                                                     <segue destination="Ls4-7T-iEc" kind="show" id="Vfj-AR-1Zh"/>
                                                 </connections>
                                             </button>
@@ -286,16 +285,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-Gl-o3n">
-                                <rect key="frame" x="28" y="297.5" width="366" height="247"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="366" id="OS5-Hx-a2B"/>
-                                    <constraint firstAttribute="height" constant="247" id="hfg-81-gu3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.27664708609999999" green="0.20622523349999999" blue="0.001250107735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxresdefault" translatesAutoresizingMaskIntoConstraints="NO" id="8Ni-My-bR7">
                                 <rect key="frame" x="51" y="20" width="343" height="222"/>
                                 <constraints>
@@ -308,6 +297,16 @@
                                     <constraint firstAttribute="width" secondItem="EQC-OA-ta1" secondAttribute="height" multiplier="15:13" constant="-40.076923076923066" id="dSq-Pt-atR"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-Gl-o3n">
+                                <rect key="frame" x="52" y="298" width="310" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="OS5-Hx-a2B"/>
+                                    <constraint firstAttribute="height" constant="247" id="hfg-81-gu3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.27664708609999999" green="0.20622523349999999" blue="0.001250107735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bDE-40-oyR"/>
                         <color key="backgroundColor" red="0.80479963061632376" green="0.8610069197837753" blue="0.80452493078887033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -316,7 +315,7 @@
                             <constraint firstItem="bDE-40-oyR" firstAttribute="trailing" secondItem="EQC-OA-ta1" secondAttribute="trailing" constant="231" id="Taz-WB-fBg"/>
                             <constraint firstItem="EQC-OA-ta1" firstAttribute="leading" secondItem="bDE-40-oyR" secondAttribute="leading" constant="20" id="lpv-Zj-A5v"/>
                             <constraint firstAttribute="trailing" secondItem="8Ni-My-bR7" secondAttribute="trailing" constant="20" id="lrn-XU-aIb"/>
-                            <constraint firstItem="GQI-Gl-o3n" firstAttribute="centerX" secondItem="umC-ih-iSB" secondAttribute="centerX" constant="4" id="qox-5Z-X59"/>
+                            <constraint firstItem="GQI-Gl-o3n" firstAttribute="centerX" secondItem="umC-ih-iSB" secondAttribute="centerX" id="qox-5Z-X59"/>
                             <constraint firstItem="GQI-Gl-o3n" firstAttribute="centerY" secondItem="umC-ih-iSB" secondAttribute="centerY" id="r35-2u-sne"/>
                             <constraint firstItem="EQC-OA-ta1" firstAttribute="bottom" secondItem="bDE-40-oyR" secondAttribute="bottom" constant="-22" id="sIS-NV-ioQ"/>
                             <constraint firstItem="8Ni-My-bR7" firstAttribute="top" secondItem="bDE-40-oyR" secondAttribute="top" constant="20" id="yty-Kk-8E8"/>

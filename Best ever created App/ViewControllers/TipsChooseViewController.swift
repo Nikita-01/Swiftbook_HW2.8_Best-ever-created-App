@@ -19,19 +19,12 @@ class TipsChooseViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = """
 Ну вот ты и добрался до тайн
-мироздания \(name ?? "")!
+мироздания, \(name ?? "")!
 """
-        
-    }
-    
-    @IBAction func getTipsButtonPressed() {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let showTipsVC = segue.destination as? ShowTipsViewController else { return }
         showTipsVC.tips = tips
     }
-
-    
-    
 }

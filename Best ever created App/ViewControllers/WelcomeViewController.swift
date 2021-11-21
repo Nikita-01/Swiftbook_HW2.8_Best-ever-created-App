@@ -26,31 +26,30 @@ class WelcomeViewController: UIViewController {
         enterButton.backgroundColor = .gray
         enterButton.layer.cornerRadius = 10
     }
-
-    @IBAction func enterButtonPressed() {
-        if nameTextField.text == "" {
-            showAlert(title: "Без имени в наше время никуда...", message: "Настойчиво рекоммендуем ввести имя!", textField: nameTextField)
-        }
-        
-    }
-    
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        nameTextField.text = ""
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
-
+        
         viewControllers.forEach {
             if let tipsChooseVC = $0 as? TipsChooseViewController {
                 tipsChooseVC.tips = tips
-              tipsChooseVC.name = nameTextField.text
+                tipsChooseVC.name = nameTextField.text
             } else if let navigationVC = $0 as? UINavigationController {
                 let developersListVC = navigationVC.topViewController as! DevelopersListViewController
                 developersListVC.developers = developersList
             }
         }
+    }
+    
+    @IBAction func enterButtonPressed() {
+        if nameTextField.text == "" {
+            showAlert(title: "Без имени в наше время никуда...", message: "Настойчиво рекоммендуем ввести имя!", textField: nameTextField)
+        }
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        nameTextField.text = ""
     }
 }
 
